@@ -4,7 +4,7 @@ let img = document.getElementsByTagName('img');
     
     // img.forEach(element => {
     //     element.style.position = 'absolute';
-    //     element.setAttribute('position', 'absolute' );
+        // element.setAttribute('position', 'absolute');
     //     console.log(element);
     // });
         
@@ -40,7 +40,7 @@ function mouseDown(eo){
         elem.style.top = eo.pageY - offsetT + 'px';
         elem.style.cursor = 'move';
         }
-
+  
             elem.onmouseup = function() {
             document.onmousemove = null;
             elem.onmouseup = null;
