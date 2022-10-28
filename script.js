@@ -3,17 +3,12 @@
 let img = document.getElementsByTagName('img');
     
     // img.forEach(element => {
-    //     element.style.position = 'absolute';
-    //     element.setAttribute('position', 'absolute' );
     //     console.log(element);
     // });
         
-    // window.onload = abs;
-    // document.onload = abs;
-    // document.addEventListener('load', abs );
     window.addEventListener( 'load', abs );
 
-    function abs(){
+    function abs() {
     for (let index = 0; index < img.length; index++) {
         let element = img[index];
         element.style.left = element.offsetLeft + 'px';
@@ -26,8 +21,9 @@ let img = document.getElementsByTagName('img');
 }
 }
 
-function mouseDown(eo){
+function mouseDown(eo) {
     eo=eo||window.event;
+    eo.preventDefault();
     let elem = eo.target;
     let offsetL = eo.pageX - parseFloat(elem.style.left);//смещение точки
     let offsetT = eo.pageY - parseFloat(elem.style.top);//   элемента
@@ -41,8 +37,8 @@ function mouseDown(eo){
         elem.style.cursor = 'move';
         }
 
-            elem.onmouseup = function() {
+            document.onmouseup = function() {
+            elem.style.cursor = 'default';
             document.onmousemove = null;
-            elem.onmouseup = null;
             }
 }
