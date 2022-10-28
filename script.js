@@ -1,10 +1,6 @@
 "use strict";
 
 let img = document.getElementsByTagName('img');
-    
-    // img.forEach(element => {
-    //     console.log(element);
-    // });
         
     window.addEventListener( 'load', abs );
 
@@ -40,5 +36,6 @@ function mouseDown(eo) {
             document.onmouseup = function() {
             elem.style.cursor = 'default';
             document.onmousemove = null;
+            document.onmouseup = null;
             }
 }
