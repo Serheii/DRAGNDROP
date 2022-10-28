@@ -3,11 +3,6 @@
 let img = document.getElementsByTagName('img');
     
     // img.forEach(element => {
-<<<<<<< HEAD
-=======
-    //     element.style.position = 'absolute';
-        // element.setAttribute('position', 'absolute');
->>>>>>> 821e0705075798aaff2f86f088e96623c299fd3b
     //     console.log(element);
     // });
         
@@ -41,9 +36,9 @@ function mouseDown(eo) {
         elem.style.top = eo.pageY - offsetT + 'px';
         elem.style.cursor = 'move';
         }
-  
-            elem.onmouseup = function() {
->>>>>>> 821e0705075798aaff2f86f088e96623c299fd3b
+
+            document.onmouseup = function() {
+            elem.style.cursor = 'default';
             document.onmousemove = null;
             }
 }
